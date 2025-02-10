@@ -1,0 +1,78 @@
+@import 'https://fonts.googleapis.com/css2?family=Goldman&display=swap';
+html,
+body {
+  background: #212121;
+  height: 100%;
+  margin: 0; /* Prevent body margin */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center; /* Ensure all text is centered horizontally */
+}
+
+.text-change-container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.text-change {
+  font-family: 'Goldman', monospace;
+  font-weight: normal;
+  font-size: larger;
+  color: #c8c8c8;
+  filter: drop-shadow(0 0 0.3em rgba(200,200,200,0.3));
+}
+
+.dud {
+  color: rgba(200,30,30,0.8);
+  filter: drop-shadow(0 0 0.5em #f00);
+}
+
+nav.nav-text {
+  font-family: 'Goldman', monospace;
+  font-weight: normal;
+  font-size: larger;
+  color: #c8c8c8;
+  filter: drop-shadow(0 0 0.3em rgba(200,200,200,0.3));
+  margin-top: 20px; /* Add some space between the scrambled text and nav text */
+  display: inline-block; /* Make sure nav text behaves like inline text for proper centering */
+}
+
+nav.nav-text a {
+  color: #c8c8c8;
+  text-decoration: none; /* Remove underline from links */
+  padding: 0 10px; /* Add space between links */
+}
+
+nav.nav-text a:hover {
+  color: #fff; /* Change text color on hover */
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Auto-adjust columns */
+  gap: 20px; /* Space between gallery items */
+  width: 55%; /* Gallery width */
+  margin-top: 30px; /* Space from the navigation */
+  padding: 20px;
+}
+
+.gallery-item img {
+  width: 100%; /* Make images responsive */
+  height: auto;
+  border-radius: 8px; /* Rounded corners for images */
+  filter: brightness(0.8);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05); /* Image zoom effect on hover */
+  filter: brightness(1);
+}
