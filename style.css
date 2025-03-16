@@ -2,8 +2,12 @@
 html,
 body {
   background: #212121;
-  height: 100%;
+  height: 100vh; /* Full viewport height */
   margin: 0; /* Prevent body margin */
+  display: flex; /* Enable flex layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
 }
 
 .text-container {
@@ -75,4 +79,35 @@ nav.nav-text a:hover {
 .gallery-item img:hover {
   transform: scale(1.05); /* Image zoom effect on hover */
   filter: brightness(1);
+}
+.projects-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+  gap: 20px;
+  padding: 20px;
+}
+
+.security-category {
+  background: #323232;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.security-category h2 {
+  font-family: 'Goldman', monospace;
+  font-size: larger;
+  color: #c8c8c8;
+  margin-bottom: 10px;
+}
+
+.security-category ul {
+  list-style: disc;  /* Use dot points */
+  padding-left: 20px; /* Ensure the dots are visible */
+}
+
+.security-category li {
+  font-family: 'Goldman', monospace;
+  color: #c8c8c8;
+  margin-bottom: 8px;
 }
